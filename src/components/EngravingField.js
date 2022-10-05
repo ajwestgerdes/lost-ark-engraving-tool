@@ -1,8 +1,11 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { TextField, Autocomplete } from "@mui/material"
+import { AccessoryContext } from "../util/Context";
 
 export const EngravingField = (props) => {
     const [value, setValue] = useState(0);
+    const [dropdownValue, setDropDownValue] = useState('')
+    const ctx = useContext(AccessoryContext)
 
     return (
         <div style={{flexFlow: 'row nowrap', marginBottom: '10px' }}>
@@ -11,6 +14,9 @@ export const EngravingField = (props) => {
                 disablePortal
                 id="engraving-dropdown"
                 options={props.engravings}
+                onInputChange={(event, newInputValue) => {
+                    setDropDownValue(newInputValue);
+                }}
                 renderInput={(params) => <TextField {...params} sx={{ marginBottom: '10px' }} label={props.label} />}
             />
             <TextField
@@ -34,6 +40,7 @@ export const EngravingField = (props) => {
                     if (value < props.min) value = props.min;
 
                     setValue(value);
+                    ctx.accessoryContext[props.accessory][dropdownValue] = value
                 }}
             />
         </div>

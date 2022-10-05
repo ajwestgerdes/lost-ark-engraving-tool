@@ -1,9 +1,10 @@
-import { useState } from "react"
 import { Card, CardContent, CardHeader, CardMedia } from "@mui/material"
-import { negativeEngravings, mainEngravings } from "../util/constants"
+import { NegativeEngravings, MainEngravings, MainStats } from "../util/constants"
 import { EngravingField } from "./EngravingField"
+import { StatsField } from "./StatsField"
 
 export const AccessoryCard = (props) => {
+
     return (
         <Card sx={{ minWidth: '300px', margin: '10px', backgroundColor: '#2c2f33' }}>
             <CardHeader
@@ -17,9 +18,10 @@ export const AccessoryCard = (props) => {
                 title={props.title}
             />
             <CardContent>
-                <EngravingField label="Engraving 1" engravings={mainEngravings} min={0} max={6}/>
-                <EngravingField label="Engraving 2" engravings={mainEngravings} min={0} max={6}/>
-                <EngravingField label="Negative Engraving" engravings={negativeEngravings} min={0} max={3}/>
+                <StatsField accessory={props.accessory} label="Stat" engravings={MainStats} mainStats={2} min={0} max={500}/>
+                <EngravingField accessory={props.accessory} label="Engraving 1" engravings={MainEngravings} min={0} max={6}/>
+                <EngravingField accessory={props.accessory} label="Engraving 2" engravings={MainEngravings} min={0} max={6}/>
+                <EngravingField accessory={props.accessory} label="Negative Engraving" engravings={NegativeEngravings} min={0} max={3}/>
             </CardContent>
         </Card>
     )   

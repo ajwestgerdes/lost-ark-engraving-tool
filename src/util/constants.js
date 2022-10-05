@@ -1,11 +1,20 @@
-export const negativeEngravings = [
+export const MainStats = [
+    'Crit',
+    'Swiftness',
+    'Specilization',
+    'Experties',
+    'Domination',
+    'Endurance'
+]
+
+export const NegativeEngravings = [
     'Attack Power Decrease',
     'Attack Speed Decrease',
     'Defense Decrease',
     'Speed Decrease'
 ]
 
-export const mainEngravings = [
+export const MainEngravings = [
     'Adrenaline',
     'Awakening',
     'Barricade',
@@ -49,7 +58,33 @@ export const mainEngravings = [
     'Vital Point'
 ]
 
-export const classEngravings = {
+export const ClassEngravings = {
     Berserker: ['Mayhem', 'Berserker Technique'],
-}    
+}
+
+
+export const DefaultEngravings = {
+    Engravings: {},
+    NegativeEngravings: {}
+}
+
+export const DefaultStats = {
+    Crit: 0,
+    Swiftness: 0,
+    Specilization: 0,
+    Experties: 0,
+    Domination: 0,
+    Endurance: 0,
+}
+
+export const AccessoryValues = {
+    necklace: {stats: DefaultStats, engravings: {}, negativeEngravings: {}},
+    earring1: {stats: DefaultStats, engravings: {}, negativeEngravings: {}},
+    earring2: {stats: DefaultStats, engravings: {}, negativeEngravings: {}},
+    ring1: {stats: DefaultStats, engravings: {}, negativeEngravings: {}},
+    ring2: {stats: DefaultStats, engravings: {}, negativeEngravings: {}},
+    abilityStone: {engravings: {}, negativeEngravings: {}},
+    books: {engravings: {}, negativeEngravings: {}}
+}
+
 
