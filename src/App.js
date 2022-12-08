@@ -1,32 +1,19 @@
-import { AccessoryCard } from './components/AccessoryCard';
-import { EngravingBar } from './components/EngravingBar';
-import { AbilityStone } from './components/AbilityStone';
-import { EngravingBooks } from './components/EngravingBooks';
-import { StatsBar } from './components/StatsBar';
-import { AccessoryValues } from './util/constants';
-import { useState } from 'react';
-import './App.css';
-import { AccessoryContext } from './util/Context';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import CraftingCalculator from "./pages/Crafting/CraftingCalculator";
+import EngravingCalculator from "./pages/Engravings/Engravings";
+import Header from './pages/Header'
 
 function App() {
-  const [accessoryContext, setAccessoryContext] = useState(AccessoryValues)
-  return (
-    <AccessoryContext.Provider value={{accessoryContext}}>
-    <div style={{display: 'flex', width: '100%', height: '100%'}} className="App">
-      <div style={{ width: '50%', display: 'flex', flexWrap: 'wrap' }}>
-        <AccessoryCard accessory={'necklace'}  title={'Necklace'} img="./assets/images/relic-ring.jpg"/>
-        <AccessoryCard accessory={'earring1'}  title={'Earring'}/>
-        <AccessoryCard accessory={'earring1'}  title={'Earring'}/>
-        <AccessoryCard accessory={'ring1'}  title={'Ring'}/>
-        <AccessoryCard accessory={'ring2'}  title={'Ring'}/>
-        <AbilityStone accessory={'abilityStone'} title={'Ability Stone'}/>
-        <EngravingBooks accessory={'books'}  title={'Books'}/>
+    return (
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route index element={<EngravingCalculator />} />
+          <Route path='crafting' element={<CraftingCalculator />} />
+      </Routes>
       </div>
-      <StatsBar />
-      <EngravingBar/>
-    </div>
-    </AccessoryContext.Provider> 
-  );
-}
+    );
+  }
 
 export default App;

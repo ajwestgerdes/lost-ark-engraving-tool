@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardMedia } from "@mui/material"
-import { NegativeEngravings, MainEngravings, MainStats } from "../util/constants"
+import { NegativeEngravings, MainEngravings, MainStats } from "../../../util/constants"
 import { EngravingField } from "./EngravingField"
 import { StatsField } from "./StatsField"
 

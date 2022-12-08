@@ -1,7 +1,7 @@
 export const MainStats = [
     'Crit',
-    'Swiftness',
-    'Specilization',
+    'Swift',
+    'Spec',
     'Experties',
     'Domination',
     'Endurance'
@@ -70,8 +70,8 @@ export const DefaultEngravings = {
 
 export const DefaultStats = {
     Crit: 0,
-    Swiftness: 0,
-    Specilization: 0,
+    Swift: 0,
+    Spec: 0,
     Experties: 0,
     Domination: 0,
     Endurance: 0,

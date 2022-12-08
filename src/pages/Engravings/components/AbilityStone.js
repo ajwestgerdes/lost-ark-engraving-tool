@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardMedia } from "@mui/material"
-import { NegativeEngravings, MainEngravings, classEngravings } from "../util/constants"
+import { NegativeEngravings, MainEngravings, classEngravings } from "../../../util/constants"
 import { EngravingField } from "./EngravingField"
 
 export const AbilityStone = (props) => {

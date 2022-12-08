@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from "react"
 import { TextField, Autocomplete } from "@mui/material"
-import { AccessoryContext } from "../util/Context";
+import { AccessoryContext } from "../../../util/Context";
 
 export const StatsField = (props) => {
     const [value, setValue] = useState(0);
@@ -40,6 +40,10 @@ export const StatsField = (props) => {
                     if (value > props.max) value = props.max;
                     if (value < props.min) value = props.min;
 
+                    console.log(props)
+
+                    console.log(props.accessory)
+                    console.log(ctx.accessoryContext[props.accessory].stats[dropdownValue])
                     setValue(value);
                     ctx.accessoryContext[props.accessory].stats[dropdownValue] = value
                 }}
