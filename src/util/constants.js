@@ -87,4 +87,30 @@ export const AccessoryValues = {
     books: {engravings: {}, negativeEngravings: {}}
 }
 
+export const Professions = {
+    fishing: {
+        sof: {
+            fish: ['Fish', 20],
+            naturalPearl: ['Natrual Pearl', 10],
+            simpleOrehaFish: ['Simple Oreha Fish', 3]
+        },
+        bof: {
+            fish: ['Fish', 30],
+            naturalPearl: ['Natrual Pearl', 15],
+            simpleOrehaFish: ['Simple Oreha Fish', 5]
+        }
+    }
+}
+
+export const FusionMaterials = [
+    {
+        label: 'Simple Oreha Fusion',
+        value: 'sof'
+    }, 
+    {
+        label: 'Basic Oreha Fusion',
+        value: 'bof'
+    }
+]
+
 

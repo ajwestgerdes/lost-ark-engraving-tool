@@ -1,7 +1,8 @@
+import { CraftingCard } from "./components/CraftingCard";
 
 
 export default function CraftingCalculator() {
   return (
-        <h1>TESTS</h1>
+        <CraftingCard profession={'fishing'} title={'Fishing'}/>
   );
 }
