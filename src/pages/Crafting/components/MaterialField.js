@@ -1,25 +1,35 @@
 import { useState } from "react"
-import { TextField, Typography } from "@mui/material"
+import { TextField, Typography, Grid } from "@mui/material"
+import { CraftingContext } from "../../../util/Context";
 
 
 export const MaterialField = (props) => {
     const [value, setValue] = useState(0);
+    const ctx = useContext(CraftingContext)
     
     return (
-        <div style={{flexFlow: 'row nowrap', marginBottom: '10px' }}>
-            <Typography variant="body1" gutterBottom>
-                {props.label}
-            </Typography>
-
-            <TextField
-                sx={{maxWidth: '60px', float: 'right', marginBottom: '10px'}}
-                id="outlined-number"
-                type="number"
-                value={value}
-                onChange={(e) => {
-                    setValue(value);
-                }}
-            />
-        </div>
+        <Grid
+                container
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+            >
+            <Grid item>
+                <Typography variant="body1" gutterBottom>
+                    {props.label}
+                </Typography>
+            </Grid>
+            <Grid item>
+                <TextField
+                    sx={{marginLeft: 'auto'}}
+                    id="outlined-number"
+                    type="numberformat"
+                    value={value}
+                    onChange={(e) => {
+                        setValue(e.target.value);
+                    }}
+                />
+            </Grid>  
+        </Grid>       
     )
 }

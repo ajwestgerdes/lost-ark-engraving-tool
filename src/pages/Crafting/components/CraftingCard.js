@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Card, CardContent, CardHeader, CardMedia, TextField, MenuItem  } from "@mui/material"
+import { Card, CardContent, CardHeader, CardMedia, TextField, MenuItem, Grid } from "@mui/material"
 import { MaterialField } from "./MaterialField"
 import { Professions, FusionMaterials } from "../../../util/constants";
 
@@ -13,6 +13,7 @@ export const CraftingCard = (props) => {
     console.log(Professions)
     console.log(props.profession)
     console.log(Professions[props.profession])
+    console.log(fusionMaterial)
 
     return (
         <Card sx={{ width: '33%', margin: '10px', backgroundColor: '#2c2f33' }}>
@@ -33,7 +34,6 @@ export const CraftingCard = (props) => {
                 label="Fusion Material"
                 value={fusionMaterial}
                 onChange={handleChange}
-                helperText="Select the fusion material"
             >
             {FusionMaterials.map((option) => (
                 <MenuItem key={option.value} value={option.value}>
@@ -44,6 +44,7 @@ export const CraftingCard = (props) => {
                 <MaterialField label="Fish" />
                 <MaterialField label="Natural Pearl"/>
                 <MaterialField label="Solar Oreha Carp"/>
+                <MaterialField label='Crafting Cost' />
             </CardContent>
         </Card>
     )   

@@ -23,10 +23,7 @@ export const StatsField = (props) => {
             <TextField
                 sx={{maxWidth: '60px', float: 'right', marginBottom: '10px'}}
                 id="outlined-number"
-                type="number"
-                InputLabelProps={{
-                    shrink: true,
-                }}
+                type="numberformat"
                 InputProps={{
                     inputProps: { 
                         min: props.min, 
