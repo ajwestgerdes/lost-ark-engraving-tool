@@ -1,12 +1,11 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { TextField, Typography, Grid } from "@mui/material"
-import { CraftingContext } from "../../../util/Context";
-
 
 export const MaterialField = (props) => {
     const [value, setValue] = useState(0);
-    const ctx = useContext(CraftingContext)
-    
+
+    // console.log(props)
+
     return (
         <Grid
                 container
@@ -27,6 +26,9 @@ export const MaterialField = (props) => {
                     value={value}
                     onChange={(e) => {
                         setValue(e.target.value);
+                        console.log('call price change')
+                        props.priceChange(e.target.value)
+                        
                     }}
                 />
             </Grid>  

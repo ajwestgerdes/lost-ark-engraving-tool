@@ -92,12 +92,14 @@ export const Professions = {
         sof: {
             fish: ['Fish', 20],
             naturalPearl: ['Natrual Pearl', 10],
-            simpleOrehaFish: ['Simple Oreha Fish', 3]
+            simpleOrehaFish: ['Simple Oreha Fish', 3],
+            craftingCost: ['Crafting Cost', 1]
         },
         bof: {
             fish: ['Fish', 30],
             naturalPearl: ['Natrual Pearl', 15],
-            simpleOrehaFish: ['Simple Oreha Fish', 5]
+            simpleOrehaFish: ['Simple Oreha Fish', 5],
+            craftingCost: ['Crafting Cost', 1]
         }
     }
 }

@@ -1,19 +1,22 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { Card, CardContent, CardHeader, CardMedia, TextField, MenuItem, Grid } from "@mui/material"
 import { MaterialField } from "./MaterialField"
 import { Professions, FusionMaterials } from "../../../util/constants";
 
 export const CraftingCard = (props) => {
     const [fusionMaterial, setFusionMaterial] = useState('bof')
+    const profObj = Professions[props.profession][fusionMaterial]
+
 
     const handleChange = (event) => {
         setFusionMaterial(event.target.value);
     };
 
-    console.log(Professions)
-    console.log(props.profession)
-    console.log(Professions[props.profession])
-    console.log(fusionMaterial)
+    const priceObject = (e) => {
+
+    }
+
+    
 
     return (
         <Card sx={{ width: '33%', margin: '10px', backgroundColor: '#2c2f33' }}>
@@ -41,10 +44,9 @@ export const CraftingCard = (props) => {
                 </MenuItem>
             ))}
             </TextField>
-                <MaterialField label="Fish" />
-                <MaterialField label="Natural Pearl"/>
-                <MaterialField label="Solar Oreha Carp"/>
-                <MaterialField label='Crafting Cost' />
+            {Object.keys(profObj).map((prof) => (
+               <MaterialField label={profObj[prof][0]} />
+            ))}
             </CardContent>
         </Card>
     )   
