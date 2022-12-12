@@ -26,8 +26,7 @@ export const MaterialField = (props) => {
                     value={value}
                     onChange={(e) => {
                         setValue(e.target.value);
-                        console.log('call price change')
-                        props.priceChange(e.target.value)
+                        props.priceCalc(e.target.value)
                         
                     }}
                 />

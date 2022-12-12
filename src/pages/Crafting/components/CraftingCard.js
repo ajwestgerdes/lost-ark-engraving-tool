@@ -5,6 +5,7 @@ import { Professions, FusionMaterials } from "../../../util/constants";
 
 export const CraftingCard = (props) => {
     const [fusionMaterial, setFusionMaterial] = useState('bof')
+    const [efficiency, setEfficiency] = useState(0)
     const profObj = Professions[props.profession][fusionMaterial]
 
 
@@ -12,8 +13,11 @@ export const CraftingCard = (props) => {
         setFusionMaterial(event.target.value);
     };
 
-    const priceObject = (e) => {
-
+    const priceCalc = (e) => {
+        
+        console.log('inside price calc')
+        console.log(props.fusionPrice[fusionMaterial])
+        console.log(e)
     }
 
     
@@ -30,6 +34,7 @@ export const CraftingCard = (props) => {
                 }
                 title={props.title}
             />
+            <h3>{efficiency}</h3>
             <CardContent>
             <TextField
                 id="outlined-fusion-material"
@@ -45,7 +50,7 @@ export const CraftingCard = (props) => {
             ))}
             </TextField>
             {Object.keys(profObj).map((prof) => (
-               <MaterialField label={profObj[prof][0]} />
+               <MaterialField label={profObj[prof][0]} priceCalc={(e) => priceCalc(e)}/>
             ))}
             </CardContent>
         </Card>

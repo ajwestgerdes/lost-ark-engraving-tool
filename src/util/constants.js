@@ -96,11 +96,25 @@ export const Professions = {
             craftingCost: ['Crafting Cost', 1]
         },
         bof: {
-            fish: ['Fish', 30],
-            naturalPearl: ['Natrual Pearl', 15],
-            simpleOrehaFish: ['Simple Oreha Fish', 5],
+            fish: ['Fish', 80],
+            naturalPearl: ['Natrual Pearl', 40],
+            simpleOrehaFish: ['Simple Oreha Fish', 10],
             craftingCost: ['Crafting Cost', 1]
         }
+    },
+    engraving: {
+        sof: {
+            fish: ['Fish', 20],
+            naturalPearl: ['Natrual Pearl', 10],
+            simpleOrehaFish: ['Simple Oreha Fish', 3],
+            craftingCost: ['Crafting Cost', 1]
+        },
+        bof: {
+            test: ['test1', 20],
+            test1: ['test2', 10],
+            test2: ['test3', 3],
+            craftingCost: ['Crafting Cost', 1]
+        }    
     }
 }
 
@@ -114,5 +128,3 @@ export const FusionMaterials = [
         value: 'bof'
     }
 ]
-
-
