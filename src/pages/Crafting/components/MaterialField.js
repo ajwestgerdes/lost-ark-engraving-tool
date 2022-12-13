@@ -26,8 +26,7 @@ export const MaterialField = (props) => {
                     value={value}
                     onChange={(e) => {
                         setValue(e.target.value);
-                        props.priceCalc(e.target.value)
-                        
+                        props.priceCalc(e.target.value, props.ahStack, props.craftStack, props.matId)
                     }}
                 />
             </Grid>  

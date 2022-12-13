@@ -7,19 +7,42 @@ export const CraftingCard = (props) => {
     const [fusionMaterial, setFusionMaterial] = useState('bof')
     const [efficiency, setEfficiency] = useState(0)
     const profObj = Professions[props.profession][fusionMaterial]
+    const priceObj = {}
+
+    console.log(profObj)
 
 
     const handleChange = (event) => {
         setFusionMaterial(event.target.value);
     };
 
-    const priceCalc = (e) => {
+    const priceCalc = (ahPrice, ahStack, craftStack, matId) => {
+        const totalFusionPrice = props.fusionPrice[fusionMaterial] * 30
+        priceObj[matId] = (ahPrice * craftStack) / ahStack
+
+        const values = Object.values(priceObj);
+
+        const sum = values.reduce((accumulator, value) => {
+        return accumulator + value;
+        }, 0);
+
         
-        console.log('inside price calc')
+        
+        console.log('--------------------------')
+        console.log(priceObj)
         console.log(props.fusionPrice[fusionMaterial])
-        console.log(e)
+        console.log(totalFusionPrice)
+        console.log(ahPrice)
+        console.log(ahStack)
+        console.log(craftStack)
+        console.log(matId)
+        console.log(sum)
+        console.log('--------------------------')
+        return (totalFusionPrice / sum) * 100
     }
 
+    // figure out how to set this and keep the price obj pressistent
+    setEfficiency()
     
 
     return (
@@ -34,24 +57,29 @@ export const CraftingCard = (props) => {
                 }
                 title={props.title}
             />
-            <h3>{efficiency}</h3>
+            <h3>{efficiency}%</h3>
             <CardContent>
-            <TextField
-                id="outlined-fusion-material"
-                select
-                label="Fusion Material"
-                value={fusionMaterial}
-                onChange={handleChange}
-            >
-            {FusionMaterials.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                {option.label}
-                </MenuItem>
-            ))}
-            </TextField>
-            {Object.keys(profObj).map((prof) => (
-               <MaterialField label={profObj[prof][0]} priceCalc={(e) => priceCalc(e)}/>
-            ))}
+                <TextField
+                    id="outlined-fusion-material"
+                    select
+                    label="Fusion Material"
+                    value={fusionMaterial}
+                    onChange={handleChange}
+                >
+                {FusionMaterials.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                    </MenuItem>
+                ))}
+                </TextField>
+                {Object.keys(profObj).map((prof) => (
+                    <MaterialField 
+                        label={profObj[prof][0]} 
+                        ahStack={profObj[prof][2]}
+                        craftStack={profObj[prof][1]}
+                        matId={prof} 
+                        priceCalc={(ahPrice, ahStack, craftStack, matId) => priceCalc(ahPrice, ahStack, craftStack, matId)}/>
+                ))}
             </CardContent>
         </Card>
     )   

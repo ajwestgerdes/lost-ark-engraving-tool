@@ -90,16 +90,16 @@ export const AccessoryValues = {
 export const Professions = {
     fishing: {
         sof: {
-            fish: ['Fish', 20],
-            naturalPearl: ['Natrual Pearl', 10],
-            simpleOrehaFish: ['Simple Oreha Fish', 3],
+            fish: ['Fish (100)', 72],
+            naturalPearl: ['Natrual Pearl (10)', 36],
+            simpleOrehaFish: ['Oreha Solar Carp (10)', 9],
             craftingCost: ['Crafting Cost', 1]
         },
         bof: {
-            fish: ['Fish', 80],
-            naturalPearl: ['Natrual Pearl', 40],
-            simpleOrehaFish: ['Simple Oreha Fish', 10],
-            craftingCost: ['Crafting Cost', 1]
+            fish: ['Fish (100)', 80, 100],
+            naturalPearl: ['Natrual Pearl (10)', 40, 10],
+            simpleOrehaFish: ['Oreha Solar Carp (10)', 10, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
         }
     },
     engraving: {
