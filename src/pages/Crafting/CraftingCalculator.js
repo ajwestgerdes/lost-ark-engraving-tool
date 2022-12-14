@@ -21,12 +21,20 @@ export default function CraftingCalculator() {
         justifyContent="space-between"
         alignItems="center"
       >
+        <FusionField label={'Caldarr Fusion'} fusionId={'cf'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
         <FusionField label={'Simple Oreha Fusion'} fusionId={'sof'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
         <FusionField label={'Basic Oreha Fusion'} fusionId={'bof'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
-        <FusionField label={'New Oreha Fusion'} fusionId={'nof'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
       </Grid> 
-      <CraftingCard profession={'fishing'} title={'Fishing'} fusionPrice={fusionPrice}/>
-      <CraftingCard profession={'engraving'} title={'Engraving'} fusionPrice={fusionPrice}/>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <CraftingCard profession={'fishing'} title={'Fishing'} fusionPrice={fusionPrice}/>
+        <CraftingCard profession={'engraving'} title={'Engraving'} fusionPrice={fusionPrice}/>
+        <CraftingCard profession={'hunting'} title={'Hunting'} fusionPrice={fusionPrice}/>
+      </Grid>
     </div>       
   );
 }

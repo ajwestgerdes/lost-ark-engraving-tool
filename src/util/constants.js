@@ -89,36 +89,72 @@ export const AccessoryValues = {
 
 export const Professions = {
     fishing: {
+        cf: {
+            fish: ['Fish (100)', 72, 100],
+            naturalPearl: ['Natrual Pearl (10)', 36, 10],
+            caldarrSolarCarp: ['Oreha Solar Carp (10)', 9, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
+        },
         sof: {
-            fish: ['Fish (100)', 72],
-            naturalPearl: ['Natrual Pearl (10)', 36],
-            simpleOrehaFish: ['Oreha Solar Carp (10)', 9],
-            craftingCost: ['Crafting Cost', 1]
+            fish: ['Fish (100)', 80, 100],
+            naturalPearl: ['Natrual Pearl (10)', 40, 10],
+            orehaSolarCarp: ['Oreha Solar Carp (10)', 10, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
         },
         bof: {
             fish: ['Fish (100)', 80, 100],
             naturalPearl: ['Natrual Pearl (10)', 40, 10],
-            simpleOrehaFish: ['Oreha Solar Carp (10)', 10, 10],
+            orehaSolarCarp: ['Oreha Solar Carp (10)', 10, 10],
             craftingCost: ['Crafting Cost', 1, 1]
-        }
+        } 
     },
     engraving: {
+        cf: {
+            ancientRelic: ['Ancient Relic (100)', 56, 100],
+            rareRelic: ['Rare Relic (10)', 28, 10],
+            caldarrRelic: ['Caldarr Relic (10)', 7, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
+        },
         sof: {
-            fish: ['Fish', 20],
-            naturalPearl: ['Natrual Pearl', 10],
-            simpleOrehaFish: ['Simple Oreha Fish', 3],
-            craftingCost: ['Crafting Cost', 1]
+            ancientRelic: ['Ancient Relic (100)', 56, 100],
+            rareRelic: ['Rare Relic (10)', 28, 10],
+            orehaRelic: ['Caldarr Relic (10)', 7, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
         },
         bof: {
-            test: ['test1', 20],
-            test1: ['test2', 10],
-            test2: ['test3', 3],
-            craftingCost: ['Crafting Cost', 1]
-        }    
+            ancientRelic: ['Ancient Relic (100)', 64, 100],
+            rareRelic: ['Rare Relic (10)', 26, 10],
+            orehaRelic: ['Caldarr Relic (10)', 8, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
+        }  
+    },
+    hunting: {
+        cf: {
+            thickRawMeat: ['Thick Raw Meat (100)', 72, 100],
+            toughLeather: ['Tough Leather (10)', 36, 10],
+            caldarrThickRawMeat: ['Caldarr Thick Raw Meat (10)', 7, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
+        },
+        sof: {
+            thickRawMeat: ['Thick Raw Meat (100)', 72, 100],
+            toughLeather: ['Tough Leather (10)', 36, 10],
+            orehaThickRawMeat: ['Oreha Thick Raw Meat (10)', 7, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
+        },
+        bof: {
+            thickRawMeat: ['Thick Raw Meat (100)', 72, 100],
+            toughLeather: ['Tough Leather (10)', 36, 10],
+            orehaThickRawMeat: ['Oreha Thick Raw Meat (10)', 8, 10],
+            craftingCost: ['Crafting Cost', 1, 1]
+        }  
     }
 }
 
 export const FusionMaterials = [
+    {
+        label: 'Caldarr Fusion',
+        value: 'cf'
+    },
     {
         label: 'Simple Oreha Fusion',
         value: 'sof'
