@@ -21,9 +21,10 @@ export default function CraftingCalculator() {
         justifyContent="space-between"
         alignItems="center"
       >
-        <FusionField label={'Caldarr Fusion'} fusionId={'cf'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
-        <FusionField label={'Simple Oreha Fusion'} fusionId={'sof'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
-        <FusionField label={'Basic Oreha Fusion'} fusionId={'bof'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
+        <FusionField label={'Caldarr Fusion'} fusionId={'caldarrFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
+        <FusionField label={'Simple Oreha Fusion'} fusionId={'simpleFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
+        <FusionField label={'Basic Oreha Fusion'} fusionId={'basicFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
+        <FusionField label={'Superior Oreha Fusion'} fusionId={'superiorFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
       </Grid> 
       <Grid
         container
