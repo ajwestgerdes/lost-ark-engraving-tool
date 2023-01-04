@@ -1,5 +1,5 @@
-import { useState, useEffect, useContext } from "react"
-import { Card, CardContent, CardHeader, CardMedia, TextField, MenuItem, Grid, Typography } from "@mui/material"
+import { useState, useEffect } from "react"
+import { Card, CardContent, TextField, MenuItem, Grid, Typography } from "@mui/material"
 import { MaterialField } from "./MaterialField"
 import { Professions, FusionMaterials } from "../../../util/constants";
 

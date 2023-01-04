@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, Typography, Button, IconButton } from '@mui/material';
+import { AppBar, Box, Toolbar, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom'
 
 export default function Header() {
@@ -11,6 +11,7 @@ export default function Header() {
             <Button color="inherit" onClick={() => navigate("/")}>Engravings</Button>
             <Button color="inherit" onClick={() => navigate("/crafting")}>Crafting</Button>
             <Button color="inherit">Raid Groups</Button>
+            <Button color="inherit" onClick={() => navigate("/split")}>Auction Split</Button>
           </Toolbar>
         </AppBar>
       </Box>
