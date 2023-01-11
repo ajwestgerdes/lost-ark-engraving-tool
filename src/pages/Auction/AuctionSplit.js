@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { TextField, Typography, Grid, Select, InputLabel, MenuItem } from "@mui/material"
 
+// Create fields to calculate max auction price
 export const MaterialField = (props) => {
     const [value, setValue] = useState(0);
 
