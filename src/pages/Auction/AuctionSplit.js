@@ -38,9 +38,8 @@ export const MaterialField = (props) => {
                     label="Age"
                     onChange={handleChange}
                 >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={4}>4</MenuItem>
+                    <MenuItem value={8}>8</MenuItem>
                 </Select>
             </Grid>
         </Grid>       
