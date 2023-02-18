@@ -5,7 +5,7 @@ import { EngravingField } from "./EngravingField"
 
 export const AbilityStone = (props) => {
     return (
-        <Card sx={{ minWidth: '300px', margin: '10px', backgroundColor: '#2c2f33' }}>
+        <Card sx={{ minWidth: '300px', margin: '10px', backgroundColor: '#001E3C' }}>
             <CardHeader
                 avatar={
                     <CardMedia

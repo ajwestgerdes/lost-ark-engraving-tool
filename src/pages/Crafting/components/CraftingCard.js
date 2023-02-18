@@ -38,15 +38,16 @@ export const CraftingCard = (props) => {
     }
 
     return (
-        <Card sx={{ width: '30%', margin: '10px', backgroundColor: '#2c2f33' }}>
+        <Card sx={{ width: '30%', backgroundColor: '#383838', border: '1px solid black', color: 'white'}}>
             <Grid
                 container
                 direction="row"
                 justifyContent="space-between"
                 alignItems="center"
+                sx={{padding: '16px'}}
             >
                 <Typography>{props.title}</Typography>
-                <Typography sx={{ color: efficiency > -1 ? 'green' : 'red'}}>{efficiency}%</Typography>
+                <Typography sx={{ color: efficiency > -1 ? 'green' : 'red'}}>{~~efficiency}%</Typography>
             </Grid>
             <CardContent>
                 <TextField

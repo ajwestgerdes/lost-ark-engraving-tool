@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CraftingCard } from "./components/CraftingCard";
-import { TextField, Typography, Grid } from "@mui/material"
+import { TextField, Typography, Grid, Divider } from "@mui/material"
 
 
 
@@ -20,17 +20,20 @@ export default function CraftingCalculator() {
         direction="row"
         justifyContent="space-between"
         alignItems="center"
+        sx={{padding: '20px'}}
       >
         <FusionField label={'Caldarr Fusion'} fusionId={'caldarrFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
         <FusionField label={'Simple Oreha Fusion'} fusionId={'simpleFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
         <FusionField label={'Basic Oreha Fusion'} fusionId={'basicFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
         <FusionField label={'Superior Oreha Fusion'} fusionId={'superiorFusion'} fusionChange={(value, name) => fusionPriceCalc(value, name)}/>
-      </Grid> 
+      </Grid>
+      <Divider variant="middle" light={true} sx={{margin: '20px', background: '#383838'}} />
       <Grid
         container
         direction="row"
         justifyContent="space-between"
         alignItems="center"
+        sx={{padding: '20px'}}
       >
         <CraftingCard profession={'fishing'} title={'Fishing'} fusionPrice={fusionPrice}/>
         <CraftingCard profession={'engraving'} title={'Engraving'} fusionPrice={fusionPrice}/>
@@ -52,7 +55,7 @@ const FusionField = (props) => {
       </Grid>
       <Grid item>
           <TextField
-            sx={{marginLeft: 'auto'}}
+            sx={{marginLeft: 'auto', background: '#383838', color: 'white'}}
             id="outlined-number"
             type="numberformat"
             value={value}

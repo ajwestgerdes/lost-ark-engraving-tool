@@ -2,8 +2,12 @@ import { useState } from "react"
 import { TextField, Typography, Grid, Select, InputLabel, MenuItem } from "@mui/material"
 
 // Create fields to calculate max auction price
-export const MaterialField = (props) => {
+export default function MaterialField(props) {
     const [value, setValue] = useState(0);
+
+    const handleChange = (x) => {
+        console.log(x)
+    }
 
     return (
         <Grid
@@ -30,12 +34,12 @@ export const MaterialField = (props) => {
                 />
             </Grid>
             <Grid item>
-            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-label">Raid #</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={age}
-                    label="Age"
+                    value={value}
+                    label="Raid"
                     onChange={handleChange}
                 >
                     <MenuItem value={4}>4</MenuItem>
