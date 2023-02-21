@@ -2,7 +2,6 @@ import * as React from 'react';
 import { AppBar, Box, Toolbar, Button, Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   Paper} from '@mui/material';
 import Draggable from 'react-draggable';
