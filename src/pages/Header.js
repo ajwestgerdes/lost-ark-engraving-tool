@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, Button, Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  Paper} from '@mui/material';
+import { InputLabel, Select, AppBar, Box, Toolbar, Button, Dialog, DialogActions, DialogContent, DialogTitle, Paper, FormControl, MenuItem} from '@mui/material';
 import Draggable from 'react-draggable';
 import { useNavigate } from 'react-router-dom'
 
@@ -27,8 +23,8 @@ export default function Header() {
             <Button color="inherit" onClick={() => navigate("/crafting")}>Crafting</Button>
             <Button color="inherit">Raid Groups</Button>
             <Button variant="outlined" onClick={handlePopupOpen}>
-        Auction Calculator
-      </Button>
+              Auction Calculator
+            </Button>
       <Dialog
         open={open}
         onClose={handlePopupClose}
@@ -39,7 +35,7 @@ export default function Header() {
           Auction Calculator
         </DialogTitle>
         <DialogContent>
-          
+          <PartySizeSelector />
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handlePopupClose}>
@@ -62,4 +58,28 @@ function PaperComponent(props) {
       <Paper {...props} />
     </Draggable>
   );
+}
+
+function PartySizeSelector() {
+  const [partySize, setPartySize] = React.useState('');
+
+  const handlePartySize = (event) => {
+    setPartySize(event.target.value);
+  };
+
+  return (
+  <FormControl fullWidth>
+  <InputLabel id="demo-simple-select-label">Age</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={partySize}
+    label="Party Size"
+    onChange={handlePartySize}
+  >
+    <MenuItem value={4}>4</MenuItem>
+    <MenuItem value={8}>8</MenuItem>
+  </Select>
+</FormControl>
+  )
 }

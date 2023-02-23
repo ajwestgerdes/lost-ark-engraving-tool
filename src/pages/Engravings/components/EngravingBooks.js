@@ -9,7 +9,6 @@ export const EngravingBooks = (props) => {
                 avatar={
                     <CardMedia
                         component="img"
-                        // sx={{ width: 151 }}
                         image={props.img}
                     />
                 }
