@@ -69,7 +69,8 @@ function PartySizeSelector() {
 
   return (
   <FormControl fullWidth>
-  <InputLabel id="demo-simple-select-label">Age</InputLabel>
+    <TextField id="outlined-basic" label="Market Price" variant="outlined" />
+  <InputLabel id="demo-simple-select-label">Party Size</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
