@@ -55,8 +55,14 @@ const FusionField = (props) => {
       </Grid>
       <Grid item>
           <TextField
-            sx={{marginLeft: 'auto', background: '#383838', color: 'white'}}
-            id="outlined-number"
+          sx={{
+            marginLeft: 'auto', 
+            input: {
+              color: "white",
+              background: "#383838",
+              outlineColor: 'white'
+            }
+          }}
             type="numberformat"
             value={value}
             onChange={(e) => {

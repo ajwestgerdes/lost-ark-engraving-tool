@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { InputLabel, Select, AppBar, Box, Toolbar, Button, Dialog, DialogActions, DialogContent, DialogTitle, Paper, FormControl, MenuItem} from '@mui/material';
+import {useState} from 'react';
+import { InputLabel, Select, AppBar, Box, Toolbar, Button, Dialog, DialogActions, DialogContent, DialogTitle, Paper, FormControl, MenuItem, TextField} from '@mui/material';
 import Draggable from 'react-draggable';
 import { useNavigate } from 'react-router-dom'
 
 export default function Header() {
   const navigate = useNavigate()
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handlePopupOpen = () => {
     setOpen(true)
@@ -61,21 +61,32 @@ function PaperComponent(props) {
 }
 
 function PartySizeSelector() {
-  const [partySize, setPartySize] = React.useState('');
+  const [partySize, setPartySize] = useState('');
+  const [marketPrice, setMarketPrice] = useState(0)
 
   const handlePartySize = (event) => {
     setPartySize(event.target.value);
   };
 
+  const handleMarketPrice = (event) => {
+    setMarketPrice(event.target.value)
+  }
+
   return (
   <FormControl fullWidth>
-    <TextField id="outlined-basic" label="Market Price" variant="outlined" />
+    <Box>
+    <TextField
+                    
+                    label="MarketPrice"
+                    value={marketPrice}
+                    onChange={handleMarketPrice}
+                >
+                  </TextField>
+    </Box>
   <InputLabel id="demo-simple-select-label">Party Size</InputLabel>
   <Select
-    labelId="demo-simple-select-label"
-    id="demo-simple-select"
     value={partySize}
-    label="Party Size"
+    placeholder="Party Size"
     onChange={handlePartySize}
   >
     <MenuItem value={4}>4</MenuItem>

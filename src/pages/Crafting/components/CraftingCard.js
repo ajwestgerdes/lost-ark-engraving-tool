@@ -65,10 +65,10 @@ export const CraftingCard = (props) => {
                 </TextField>
                 {Object.keys(profObj).map((prof) => (
                     <MaterialField
-                        label={profObj[prof][0]} 
+                        label={profObj[prof][0]}
                         ahStack={profObj[prof][2]}
                         craftStack={profObj[prof][1]}
-                        matId={prof} 
+                        matId={prof}
                         priceCalc={(ahPrice, ahStack, craftStack, matId) => createPriceObj(ahPrice, ahStack, craftStack, matId)}/>
                 ))}
             </CardContent>
