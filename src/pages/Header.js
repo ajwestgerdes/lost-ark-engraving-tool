@@ -22,7 +22,14 @@ export default function Header() {
             <Button color="inherit" onClick={() => navigate("/")}>Engravings</Button>
             <Button color="inherit" onClick={() => navigate("/crafting")}>Crafting</Button>
             <Button color="inherit">Raid Groups</Button>
-            <Button variant="outlined" onClick={handlePopupOpen}>
+            <Button variant="outlined" onClick={handlePopupOpen}
+            sx={{
+              input: {
+                color: "white",
+                background: "#383838",
+                outlineColor: 'white'
+              }
+            }}>
               Auction Calculator
             </Button>
       <Dialog

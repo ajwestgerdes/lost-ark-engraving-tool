@@ -17,10 +17,31 @@ export const EngravingField = (props) => {
                 onInputChange={(event, newInputValue) => {
                     setDropDownValue(newInputValue);
                 }}
-                renderInput={(params) => <TextField {...params} sx={{ marginBottom: '10px' }} label={props.label} />}
+                renderInput={(params) => {
+                    <TextField {...params} 
+                        sx={{ 
+                            marginBottom: '10px',
+                            input: {
+                                color: "white",
+                                background: "#383838",
+                                outlineColor: 'white'
+                            }
+                        }} 
+                        label={props.label} />
+                }}
+                
             />
             <TextField
-                sx={{maxWidth: '60px', float: 'right', marginBottom: '10px'}}
+                sx={{
+                    maxWidth: '60px', 
+                    float: 'right', 
+                    marginBottom: '10px',
+                    input: {
+                        color: "white",
+                        background: "#383838",
+                        outlineColor: 'white'
+                      }
+                }}
                 id="outlined-number"
                 type="numberformat"
                 InputProps={{
