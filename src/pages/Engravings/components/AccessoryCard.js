@@ -6,7 +6,16 @@ import { StatsField } from "./StatsField"
 export const AccessoryCard = (props) => {
 
     return (
-        <Card sx={{ minWidth: '300px', margin: '10px', backgroundColor: '#001E3C' }}>
+        <Card sx={{ 
+            minWidth: '300px', 
+            margin: '10px', 
+            backgroundColor: '#383838',
+            input: {
+                color: "white",
+                background: "#383838",
+                outlineColor: 'white'
+              }
+        }}>
             <CardHeader
                 avatar={
                     <CardMedia
@@ -15,6 +24,13 @@ export const AccessoryCard = (props) => {
                         image={props.img}
                     />
                 }
+                sx={{
+                    input: {
+                        color: "white",
+                        background: "#383838",
+                        outlineColor: 'white'
+                      }
+                }}
                 title={props.title}
             />
             <CardContent>

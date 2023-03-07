@@ -10,25 +10,22 @@ export const EngravingField = (props) => {
     return (
         <div style={{flexFlow: 'row nowrap', marginBottom: '10px' }}>
             <Autocomplete
-                sx={{minWidth: '200px', float: 'left'}}
+                sx={{
+                    minWidth: '200px', 
+                    float: 'left',
+                    input: {
+                        color: "white",
+                        background: "#383838",
+                        outlineColor: 'white'
+                      }
+                }}
                 disablePortal
                 id="engraving-dropdown"
                 options={props.engravings}
                 onInputChange={(event, newInputValue) => {
                     setDropDownValue(newInputValue);
                 }}
-                renderInput={(params) => {
-                    <TextField {...params} 
-                        sx={{ 
-                            marginBottom: '10px',
-                            input: {
-                                color: "white",
-                                background: "#383838",
-                                outlineColor: 'white'
-                            }
-                        }} 
-                        label={props.label} />
-                }}
+                renderInput={(params) => <TextField {...params} sx={{ marginBottom: '10px' }} label={props.label} />}
                 
             />
             <TextField
