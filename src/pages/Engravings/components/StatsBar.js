@@ -5,14 +5,7 @@ import { AccessoryContext } from "../../../util/Context";
 
 export const StatsBar = (props) => {
     const ctx = useContext(AccessoryContext)
-
-    console.log(ctx)
-
-    useEffect(() => {
-        // Update the document title using the browser API
-        console.log('test')
-      });
-
+    
     let crit = ctx.accessoryContext.necklace.stats.Crit +
         ctx.accessoryContext.earring1.stats.Crit +
         ctx.accessoryContext.earring2.stats.Crit +
