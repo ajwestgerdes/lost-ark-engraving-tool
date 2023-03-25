@@ -4,7 +4,7 @@ import { EngravingField } from "./EngravingField"
 
 export const EngravingBooks = (props) => {
     return (
-        <Card sx={{ minWidth: '300px', margin: '10px', backgroundColor: '#001E3C' }}>
+        <Card sx={{ minWidth: '300px', margin: '10px', backgroundColor: '#383838' }}>
             <CardHeader
                 avatar={
                     <CardMedia
