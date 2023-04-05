@@ -16,22 +16,22 @@ export default function Roster() {
   
     return (
       <Grid container spacing={2}>
-        <CardContent>
-          <Box display="flex" alignItems="center">
-            <Avatar src={loaStriker} />
-            <Typography variant="h5" component="h2" sx={{ ml: 2 }}>
-              Bigpumper7
-            </Typography>
-          </Box>
-          <Box display="flex" alignItems="center" sx={{ mt: 2 }}>
-            <Typography variant="h6" component="h3" sx={{ mr: 2 }}>
-              Rating:
-            </Typography>
-            <Typography variant="h6" component="h3">
-              1520
-            </Typography>
-          </Box>
-        </CardContent>
+        <Card sx={{ maxWidth: 345 }}>
+        <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            R
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
+        }
+        title="Someusername"
+        subheader="1520"
+      />
+      </Card>
       </Grid>
     );
   }
